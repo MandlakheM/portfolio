@@ -1,0 +1,130 @@
+.navbar {
+  background-color: var(--bg);
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+}
+
+.navbar-logo .logo-link {
+  display: flex;
+  align-items: center;
+  color: var(--text-primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar-logo {
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav-items a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-items a:hover {
+  color: var(--primary);
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.github-button {
+  border: 1.8px solid var(--primary);
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+  transition: all 0.6s ease-in-out;
+}
+
+.github-button:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.mobile-icon {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.mobile-menu-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  /* right: 0; */
+  width: 100%;
+  background: var(--bg-light);
+  /* margin-left: 2rem; */
+  padding: 16px;
+  gap: 16px;
+  border-radius: 0 0 20px 20px;
+}
+
+.mobile-github-button {
+  border: 1.8px solid var(--primary);
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+  transition: all 0.6s ease-in-out;
+  display: none;
+  width: max-content;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-items {
+    display: none;
+  }
+
+  .mobile-icon {
+    display: block;
+  }
+
+  .github-button {
+    display: none;
+  }
+
+  .mobile-menu-open {
+    display: flex;
+  }
+
+  .mobile-github-button {
+    display: block;
+  }
+
+  .github-button {
+    font-size: 14px;
+  }
+}
