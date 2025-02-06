@@ -449,7 +449,7 @@ export const projects = [
     image:
       "https://firebasestorage.googleapis.com/v0/b/employee-reg-79927.appspot.com/o/9aaeef15079cb4ed1fe67ec89ffc3974.png?alt=media&token=04a46d2f-de7f-4ea0-887b-1aa16296d422",
     tags: ["React Js", "HTML", "CSS"],
-    category: "assessment",
+    category: "react",
     features: "N/A",
     challenges:
       "Getting the perfect shapes to use since some components required to be shaped an curved in a unique way.",
@@ -619,7 +619,8 @@ export const projects = [
     title: "AudioRec voice recorder",
     description:
       "A React Native mobile application for recording, managing, and organizing voice notes. This app provides a user-friendly interface for creating, storing, and managing voice recordings with features like naming, searching, and organizing your recordings.",
-    image: "https://www.vectorlogo.zone/logos/expoio/expoio-ar21.svg",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/employee-reg-79927.appspot.com/o/Screenshot_20250117_103426_Expo%20Go.jpg?alt=media&token=beeb0af2-b574-4e3c-8a64-43f46f83bbca",
     tags: [
       "React Native",
       "Expo",
@@ -639,7 +640,8 @@ export const projects = [
     title: "Birthday card creation app",
     description:
       "This is a simple Expo app that allows a user to create a birthday card by choosing from a given template and then adding text of their choice.",
-    image: "https://www.vectorlogo.zone/logos/expoio/expoio-ar21.svg",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/employee-reg-79927.appspot.com/o/Screenshot_20250129_094033_Expo%20Go.jpg?alt=media&token=1d7ecb0d-b6df-4388-8f0f-8007c79c61e9",
     tags: [
       "React Native",
       "Expo",
@@ -659,7 +661,8 @@ export const projects = [
     title: "Payment Gateway app",
     description:
       "A simple payment gateway app built using React Native. This application allows users to enter their card details and make payments securely using the Paystack Webview integration.",
-    image: "https://www.vectorlogo.zone/logos/expoio/expoio-ar21.svg",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/employee-reg-79927.appspot.com/o/Screenshot_20250104_124133_Expo%20Go.jpg?alt=media&token=50d67603-1735-4d5b-a1b6-ace2db1cd211",
     tags: [
       "React Native",
       "Expo",
@@ -705,7 +708,8 @@ export const projects = [
     title: "Shopping List  app",
     description:
       "A simple and intuitive shopping list app built using React Native and Redux. This app allows users to manage their shopping list efficiently, with features like adding, editing, deleting items, and searching for items by name or category.",
-    image: "https://www.vectorlogo.zone/logos/expoio/expoio-ar21.svg",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/employee-reg-79927.appspot.com/o/Screenshot_20250105_144738_Expo%20Go.jpg?alt=media&token=01a1ba07-145a-45fb-8c3b-cc314f936cef",
     tags: [
       "React Native",
       "Expo",
@@ -730,7 +734,8 @@ export const projects = [
     title: "MPE dining table booking app",
     description:
       "A React Native application that allows users to book a table at a restaurant. Users can view available tables, select a table, and book it for a specific date and time. The app also provides a feature to cancel a booking if needed. There is also an admin dashboard to manage table bookings. The app uses Node.js and MongoDB for the backend.",
-    image: "https://www.vectorlogo.zone/logos/expoio/expoio-ar21.svg",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/employee-reg-79927.appspot.com/o/Screenshot_20250206_150407_mpe-dining.jpg?alt=media&token=b8e4c6c8-86c4-4269-8012-44e6988fecc3",
     tags: [
       "React Native",
       "Expo",

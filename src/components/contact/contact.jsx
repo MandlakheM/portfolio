@@ -2,11 +2,12 @@ import React, { useRef, useState } from "react";
 import "./contact.css";
 import { Snackbar } from "@mui/material";
 import axios from "axios";
+
 const Contact = () => {
   const [open, setOpen] = useState(false);
   const form = useRef();
-  const [to, setTo] = useState("mangumtamandilakhe7@gmail.com");
-  const [from, setFrom] = useState("");
+  const [fromEmail, setFromEmail] = useState("");
+  const [fromName, setFromName] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
@@ -14,19 +15,22 @@ const Contact = () => {
     e.preventDefault();
     try {
       await axios.post("https://basic-email.onrender.com/api/send", {
-        from,
-        to,
+        fromEmail,
+        fromName,
         subject,
         message,
       });
 
-      alert("Email sent!");
+      setOpen(true);
       
-      setFrom("");
+      // Clear form
+      setFromEmail("");
+      setFromName("");
       setSubject("");
       setMessage("");
+      form.current.reset();
     } catch (err) {
-      alert(err);
+      alert("Error sending email: " + err.message);
     }
   };
 
@@ -45,7 +49,7 @@ const Contact = () => {
               placeholder="Your Email"
               name="from_email"
               className="form-input"
-              onChange={(e) => setFrom(e.target.value)}
+              onChange={(e) => setFromEmail(e.target.value)}
               required
             />
             <input
@@ -53,6 +57,7 @@ const Contact = () => {
               placeholder="Your Name"
               name="from_name"
               className="form-input"
+              onChange={(e) => setFromName(e.target.value)}
               required
             />
             <input
@@ -75,15 +80,13 @@ const Contact = () => {
               Send
             </button>
           </form>
-          {open && (
-            <Snackbar
-              open={open}
-              autoHideDuration={6000}
-              onClose={() => setOpen(false)}
-              message="Email sent successfully!"
-              severity="success"
-            />
-          )}
+          <Snackbar
+            open={open}
+            autoHideDuration={6000}
+            onClose={() => setOpen(false)}
+            message="Email sent successfully!"
+            severity="success"
+          />
         </div>
       </div>
     </section>
