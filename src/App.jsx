@@ -11,7 +11,6 @@ import Goals from "./components/goals/goals";
 import Contact from "./components/contact/contact";
 function App() {
   const [openModal, setOpenModal] = useState({ state: false, project: null });
-
   return (
     <>
       <Nav />
