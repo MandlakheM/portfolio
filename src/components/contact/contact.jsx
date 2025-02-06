@@ -10,9 +10,11 @@ const Contact = () => {
   const [fromName, setFromName] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setloading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setloading(true);
     try {
       await axios.post("https://basic-email.onrender.com/api/send", {
         fromEmail,
@@ -22,7 +24,7 @@ const Contact = () => {
       });
 
       setOpen(true);
-      
+
       // Clear form
       setFromEmail("");
       setFromName("");
@@ -31,6 +33,8 @@ const Contact = () => {
       form.current.reset();
     } catch (err) {
       alert("Error sending email: " + err.message);
+    } finally {
+      setloading(false);
     }
   };
 
@@ -88,6 +92,11 @@ const Contact = () => {
             severity="success"
           />
         </div>
+        {loading && (
+          <div className="loaderCont">
+            <div className="loader"></div>
+          </div>
+        )}
       </div>
     </section>
   );
